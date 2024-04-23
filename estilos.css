@@ -1,0 +1,240 @@
+body{
+   background-color:rgb(12, 99, 125);
+    overflow: hidden;
+    color: #fff;
+}
+#contenedor{
+    height: 99.9vh;    
+    width: 99%;
+    background-color:rgba(15, 111, 135, 0);
+   padding: 14px;
+   border: 1px solid  rgb(250, 235, 215);
+   border-radius: 7px;
+}
+/* navbar */
+#nav{
+    border-radius: 5px;
+}
+/* boton para agregar tarea */
+.btnbtn{
+    background-color: rgb(12, 99, 125);
+    color:#fff;
+    transition: 0.5s; 
+    border:solid 2px;
+ }
+.btnbtn:hover{
+    box-shadow: inset -5px 5px 10px rgb(8, 58, 89);
+    cursor: pointer; 
+ }
+.btnbtn:active{
+    box-shadow: inset 5px -5px 10px rgb(8, 58, 89);
+    background-color:rgb(15, 99, 135); 
+ }
+/* boton hacia El MAin */
+.btnL{
+    color: aliceblue;
+   background-image:linear-gradient(75deg, rgb(3, 197, 3) 10%, rgb(14, 14, 248) 99%) ;
+    width: 12%;
+   height: 28%;
+    font-size: 20px;
+   border-radius:3px;
+    padding: 3px;
+   font-weight: 550;
+   text-align: center;
+    color: aliceblue;
+    text-decoration: none;
+   transition: 0.5s;
+}
+.btnL:hover{
+    background-image:linear-gradient(75deg, rgb(14, 14, 248) 10%, rgb(3, 197, 3) 99%) ;
+   box-shadow: 0px 0px 10px black;
+    transform: scale(1.5);
+   cursor: pointer; 
+}
+/* boton para cambio de modo */
+#btnClasses{
+    background-color: rgb(25, 25, 68);
+    width: 5pc;
+    height: 30%;
+     font-size: 20px;
+    border-radius:3px;
+     padding:3px;
+    font-weight: 550;
+     color:#fff;
+    top: 30px;
+    transition: 0.5s;
+    text-decoration: none;
+}
+#btnClasses:hover{
+   box-shadow: 0px 0px 10px rgb(255, 255, 255);
+    background-color:#fff;
+    color: rgb(25, 25, 68);
+    cursor: pointer;
+    transform: scale(1.2);
+}
+/* contenedor de el titulo */
+.contenedorTitulo{
+    background-color: rgba(0, 255, 255, 0);
+    width: 35%;
+    position: relative;
+    top: -45px;
+    left: 50%;
+}
+/*input para el dueno de las tareas*/
+
+.btn-addTitle{
+   background-color:rgb(12, 99, 125);
+    border: 2px solid;   
+   border-radius: 5px;
+    color:  #fff;
+    transition: 0.5s;
+}
+/*  */
+.btn-addTitle:hover{
+    box-shadow: inset 5px 5px 10px rgb(8, 58, 89);
+    cursor: pointer; 
+}
+.btn-addTitle:active{
+   box-shadow: inset -5px -5px 10px rgb(8, 58, 89);
+    background-color:rgb(15, 99, 135); 
+}
+#listaTareas{
+   overflow-y: scroll;
+   height: 70vh;
+   border-radius: 5px;
+}
+#listaTareas::-webkit-scrollbar,#listaTareas > div::-webkit-scrollbar{
+    background-color: transparent;
+}
+#listaTareas > div{
+    margin-left: 2px;
+    margin-right: 2px;
+    overflow: scroll;
+    border-radius: 5px;
+    padding: 15px;
+    height: 300px;
+    background-color:#fff;
+    color: rgb(0, 0, 0);
+}
+/* estilos de los botones*/
+button{
+    border-radius: 5px;
+    position: relative;
+    top: -10px;
+}
+.btnL,#btnClasses{
+    position: relative;
+    top: -40px;
+}
+/* contenedor de las tareas */
+section{
+   border-radius: 5px;
+   background-color: rgb(27, 79, 101);
+   height:71.0vh;
+   margin-top: -40px;
+}
+textarea{
+    border-radius: 5px;
+    background-color:rgb(27, 79, 101);
+    border: solid 0px;
+    min-height: 40px;
+    height: 70%;
+    width: 95%;
+}
+textarea::-webkit-scrollbar{
+    background-color: #52070700;
+}
+/*
+section::-webkit-scrollbar{
+    background-color: transparent;
+}
+/* las tareass
+section > div{
+   text-align: center;
+    width: 95%;
+    border-radius: 5px;
+   background-color:antiquewhite;
+   padding: 10px;
+   margin: 30px;
+   margin-left: -5px;
+    overflow: scroll;
+    border: solid white;
+  transition: 0.5s;
+  animation: mover 3s linear infinite;
+}
+section > div:hover{
+    cursor: pointer;
+    box-shadow: 0px 0px 35px black;
+    transform: scale(1.2);
+}
+section > div::-webkit-scrollbar{
+    background-color: transparent;
+
+}
+h3{
+    color:rgb(12, 99, 125);
+}
+
+@keyframes mover {
+    0%{
+        transform: translate(0px, 0px);
+    }
+    30%{
+        transform: translate(0px, 3px);
+    }
+    60%{
+        transform: translate(0px, -3px);
+    }
+    100%{
+        transform: translate(0px, 0px);
+    }
+}
+
+@media screen and (max-width: 995px) {
+    section{
+        grid-template-columns: auto auto auto ;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    body{
+        text-decoration: none;
+        /* background-color: rgba(240, 248, 255, 0); 
+    }
+    section{
+        grid-template-columns: auto auto ;
+    }
+    .btn-addTitle, .btnbtn{
+        font-size: 20px;
+    }
+}
+@media screen and (max-width: 555px) {
+    nav{
+        width: 97%;
+    }
+    section{
+        height: 570px;
+        grid-template-columns: auto  ;
+        overflow-x:hidden ;
+        bottom: 5px;
+    }
+    .contenedorTitulo{
+        left: 48%;
+    }
+    .btnbtn{
+        width: 20%;
+        font-size: 20px;
+        text-align: center;
+    }
+    .btn-addTitle{
+        left: 48%;
+        width: 47%;
+        font-size: 20px;
+    }
+    #btnClasses{
+        left: 83%;
+    }
+    section{
+        width: 97%;
+    }
+}
